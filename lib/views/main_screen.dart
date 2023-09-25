@@ -4,6 +4,7 @@ import 'package:flutter_nasa_app/models/apod_data.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class MainScreen extends StatefulWidget {
+  const MainScreen({Key? key}) : super(key: key);
   @override
   _MainScreenState createState() => _MainScreenState();
 }
