@@ -9,7 +9,6 @@ part of 'apod_data.dart';
 ApodData _$ApodDataFromJson(Map<String, dynamic> json) => ApodData(
       date: json['date'] as String,
       explanation: json['explanation'] as String,
-      hdurl: json['hdurl'] as String,
       title: json['title'] as String,
       url: json['url'] as String,
     );
@@ -17,7 +16,6 @@ ApodData _$ApodDataFromJson(Map<String, dynamic> json) => ApodData(
 Map<String, dynamic> _$ApodDataToJson(ApodData instance) => <String, dynamic>{
       'date': instance.date,
       'explanation': instance.explanation,
-      'hdurl': instance.hdurl,
       'title': instance.title,
       'url': instance.url,
     };
