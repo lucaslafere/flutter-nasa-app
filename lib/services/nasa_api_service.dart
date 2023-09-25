@@ -8,10 +8,10 @@ class ApodService {
     Uri uri;
     if (date != null) {
       uri = Uri.parse(
-          '${ApiConstants.BASE_URL}${ApiConstants.APOD_ENDPOINT}?api_key=$apiKey&date=$date');
+          '${ApiConstants.baseURL}${ApiConstants.apodEndpoint}?api_key=$apiKey&date=$date');
     } else {
       uri = Uri.parse(
-          '${ApiConstants.BASE_URL}${ApiConstants.APOD_ENDPOINT}?api_key=$apiKey');
+          '${ApiConstants.baseURL}${ApiConstants.apodEndpoint}?api_key=$apiKey');
     }
 
     final response = await http.get(uri);

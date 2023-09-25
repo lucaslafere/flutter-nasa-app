@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_nasa_app/views/main_screen.dart';
 
 void main() async {
-  await dotenv.load();
+  await dotenv.load(fileName: ".env");
   runApp(MyApp());
 }
 

@@ -1,7 +1,8 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class ApiConstants {
-  static const String BASE_URL = 'https://api.nasa.gov/planetary/';
-  static const String APOD_ENDPOINT = 'apod';
-  String API_KEY = dotenv.env['NASA_API_KEY']!;
+  // ignore: constant_identifier_names
+  static const String baseURL = 'https://api.nasa.gov/planetary/';
+  static const String apodEndpoint = 'apod';
+  String apiKey = dotenv.env['NASA_API_KEY']!;
 }

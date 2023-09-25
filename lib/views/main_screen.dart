@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_nasa_app/services/nasa_api_service.dart';
 import 'package:flutter_nasa_app/models/apod_data.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -13,12 +14,12 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('NASA APOD')),
+      appBar: AppBar(title: const Text('NASA APOD')),
       body: FutureBuilder<ApodData>(
-        future: apodService.fetchApodData(apiKey: "YOUR_API_KEY"),
+        future: apodService.fetchApodData(apiKey: dotenv.env['NASA_API_KEY']!),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
           } else {
